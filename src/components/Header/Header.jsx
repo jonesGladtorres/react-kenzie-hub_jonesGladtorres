@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/Logo.png'
 import { ButtonHeader } from '../../styles/ButtonHeader'
 import { StyledHeader } from './style'
 

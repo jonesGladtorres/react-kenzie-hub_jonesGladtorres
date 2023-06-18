@@ -3,7 +3,7 @@ import { Header } from "../../components/Header/Header";
 import { Button } from "../../styles/Button";
 import { StyledInput } from "../../styles/Input";
 import { Paragraph, Title1 } from "../../styles/Typography";
-import { InputsContainer, StyledForm, StyledMain } from "../../styles/form";
+import { InputsContainer, StyledForm, StyledMain } from "../../styles/Form";
 import { TitleFormRegister } from "./style";
 import { useForm } from "react-hook-form";
 import { StyledSelect } from "../../styles/Select";
