@@ -3,27 +3,34 @@ import { RouterMain } from "./routes/RouterMain"
 import { GlobalReset } from "./styles/GlobalReset"
 import { GlobalStyles } from "./styles/GlobalStyle"
 import 'react-toastify/dist/ReactToastify.css';
+import { UserProvider } from "./providers/UserContext";
+import { TechProvider } from "./providers/TechContext";
+
 
 function App() {
 
 
   return (
-    <>
-      <GlobalReset />
-      <GlobalStyles />
-      <RouterMain/>
-      <ToastContainer 
-      position="top-right"
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="dark"/>
-    </>
+    <UserProvider>
+      <div className="App">
+        <GlobalReset />
+        <GlobalStyles />
+        <TechProvider>
+          <RouterMain />
+        </TechProvider>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark" />
+      </div>
+    </UserProvider>
   )
 }
 

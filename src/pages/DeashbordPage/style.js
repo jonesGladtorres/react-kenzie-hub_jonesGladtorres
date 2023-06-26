@@ -46,3 +46,33 @@ export const LineDeashboard = styled.span`
     width: 100%;
     border-bottom: 1px solid var(--color-grey-2);
 `
+
+export const ListCards = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--color-grey-3);
+    width: 100%;
+    padding: 30px;
+    border-radius: 4px;
+`
+
+export const AddCardsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+`
+
+export const AddTechsButton = styled.button`
+    background-color: var(--color-grey-2);
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-grey-0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    :hover{
+        background-color: var(--color-grey-1);
+    }
+`

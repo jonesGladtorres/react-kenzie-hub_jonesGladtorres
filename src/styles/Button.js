@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+
 export const StyledButton = css`
 
     ${({background}) => {
@@ -27,7 +28,7 @@ export const StyledButton = css`
                 return css`
                     width: 5rem;
                 `
-        
+
             default:
                 return css`
                     width: 100%;

@@ -10,8 +10,9 @@ export function Header({children}){
     const navegate = useNavigate()
 
     function buttonClick(){
-        navegate('/')
         localStorage.clear()
+        navegate('/')
+        window.location.reload(false)
     }
 
     return(

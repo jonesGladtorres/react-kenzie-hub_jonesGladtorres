@@ -1,35 +1,26 @@
 import { useForm } from 'react-hook-form'
 import logo from '../../assets/Logo.png'
-import { api } from '../../services/api'
 import { Paragraph, Title1 } from '../../styles/Typography'
 import { StyledInput } from '../../styles/Input'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { StyledHeader } from '../../components/Header/style'
 import { Button } from '../../styles/Button'
 import { InputsContainer, StyledForm, StyledMain } from '../../styles/Form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { LoginSchema } from './LoginSchema'
-import { toast } from 'react-toastify'
+import { useContext } from 'react'
+import { UserContext } from '../../providers/UserContext'
 
-export function LoginPage({setDataUser}){
-    const navegate = useNavigate()
+
+export function LoginPage(){
+    const { Login } = useContext(UserContext)
 
     
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: zodResolver(LoginSchema)
     })
     
-    async function Login(formData){
-        try {
-            const { data } = await api.post('/sessions', formData)
-            setDataUser(data)
-            localStorage.setItem('@TOKEN', data.token)
-            localStorage.setItem('@USERID', data.user.id)
-            navegate('/deashbord')
-        } catch (error) {
-            toast.error('Email ou senha incorreto')
-        }
-    }
+    
     
     async function submit(formData){
         await Login(formData)
@@ -53,7 +44,7 @@ export function LoginPage({setDataUser}){
                     <Button background='primary' >Entrar</Button>
                 </InputsContainer>
                 <Paragraph color='grey1'>Ainda não possui uma conta?</Paragraph>
-                <Button background='secondary' onClick={() => navegate('/register')}>Cadastre-se</Button>
+                <Link to={'/register'}><Button background='secondary'>Cadastre-se</Button></Link>
             </StyledForm>
         </StyledMain>
     )
