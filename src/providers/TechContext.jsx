@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { api } from "../services/api";
+import { toast } from "react-toastify";
 
 export const TechContext = createContext({})
 
@@ -16,6 +17,7 @@ export function TechProvider({children}){
                 }
             })
             setTechs((techs) => [...techs, formData])
+            toast.success('Tecnologia adicionada com sucesso!')
         } catch (error) {
             console.log(error.message);
         }
@@ -30,6 +32,7 @@ export function TechProvider({children}){
             })
 
             setTechs((techs) => techs.filter( tech => tech.id !== techId))
+            toast.success('Tecnologia deletada com sucesso!')
         } catch (error) {
             console.log(error.message)
         }
@@ -46,6 +49,7 @@ export function TechProvider({children}){
             findleTech.status = formData.status
             setTechs((techs) => techs.filter( tech => tech.id !== techId))
             setTechs((techs) => [...techs, findleTech])
+            toast.success('Tecnologia editada com sucesso!')
         } catch (error) {
             console.log(error.message);
         }
