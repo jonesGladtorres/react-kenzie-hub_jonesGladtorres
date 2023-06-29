@@ -12,14 +12,14 @@ function App() {
 
   return (
     <UserProvider>
-      <div className="App">
+      <div className='App'>
         <GlobalReset />
         <GlobalStyles />
         <TechProvider>
           <RouterMain />
         </TechProvider>
         <ToastContainer
-          position="top-right"
+          position='top-right'
           autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
@@ -28,7 +28,7 @@ function App() {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="dark" />
+          theme='dark' />
       </div>
     </UserProvider>
   )

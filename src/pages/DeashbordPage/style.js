@@ -5,6 +5,9 @@ const BaseStyled = css`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 
 export const ContainerDeashboard = styled.div`
@@ -28,7 +31,9 @@ export const HeaderDeashboard = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 50px 0;
-    
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 
 export const MainDeashboard = styled.main`

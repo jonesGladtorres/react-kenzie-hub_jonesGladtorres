@@ -58,7 +58,7 @@ export function ModalEditTecs({modalEditIsOpen, setEditItsOpen}){
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal"
+        contentLabel='Example Modal'
         >
             <ModalAddContainer>
                 <ModalAddHeader>
@@ -68,12 +68,12 @@ export function ModalEditTecs({modalEditIsOpen, setEditItsOpen}){
                 <form onSubmit={handleSubmit(submit)}>
                     <FormModalAdd>
                         <Paragraph>Nome</Paragraph>
-                        <StyledInput type="text" disabled placeholder={idModal.name}/>
+                        <StyledInput type='text' disabled placeholder={idModal.name}/>
                         <Paragraph>Selecionar status</Paragraph>
                         <StyledSelect {...register('status')}>
-                            <option value="Iniciante">Iniciante</option>
-                            <option value="Intermediário">Intermediário</option>
-                            <option value="Avançado">Avançado</option>
+                            <option value='Iniciante'>Iniciante</option>
+                            <option value='Intermediário'>Intermediário</option>
+                            <option value='Avançado'>Avançado</option>
                         </StyledSelect>
                     </FormModalAdd>
                     <ButtonsContainer>

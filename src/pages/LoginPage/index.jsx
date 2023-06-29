@@ -30,16 +30,16 @@ export function LoginPage(){
     return(
         <StyledMain>
             <StyledHeader>
-                <img src={logo} alt="logo marca do site, escrito em rosa Kenzie Hub" />
+                <img src={logo} alt='logo marca do site, escrito em rosa Kenzie Hub' />
             </StyledHeader>
             <StyledForm onSubmit={handleSubmit(submit)} height='min' noValidate>
                 <Title1>Login</Title1>
                 <InputsContainer>
                     <Paragraph>Email</Paragraph>
-                    <StyledInput type="text" {...register('email')} placeholder='Digite seu E-mail' border='yes'/>
+                    <StyledInput type='text' {...register('email')} placeholder='Digite seu E-mail' border='yes'/>
                     {errors.email ? <Paragraph color="error">{errors.email?.message}</Paragraph> : null}
                     <Paragraph>Senha</Paragraph>
-                    <StyledInput type="password" {...register('password')} placeholder='Digite sua senha' border='yes'/>
+                    <StyledInput type='password' {...register('password')} placeholder='Digite sua senha' border='yes'/>
                     {errors.password ? <Paragraph color="error">{errors.password?.message}</Paragraph> : null}
                     <Button background='primary' >Entrar</Button>
                 </InputsContainer>
