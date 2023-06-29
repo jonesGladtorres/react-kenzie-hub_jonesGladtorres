@@ -45,7 +45,7 @@ export function DeashbordPage(){
                     <AddTechsButton onClick={() => openModalAdd()}><IoMdAdd size={20}/></AddTechsButton>
                 </AddCardsContainer>
                 <ListCards>
-                    {techs.map((tech) => <TecCards tech={tech} setEditItsOpen={setEditItsOpen}/>)}
+                    {techs.map((tech) => <TecCards key={tech.id} tech={tech} setEditItsOpen={setEditItsOpen}/>)}
                 </ListCards>
             </MainDeashboard>
             <ModalEditTecs modalEditIsOpen={modalEditIsOpen} setEditItsOpen={setEditItsOpen}/>
